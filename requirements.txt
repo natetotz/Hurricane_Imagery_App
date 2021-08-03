@@ -1,0 +1,6 @@
+streamlit==0.75.0
+pandas
+numpy
+matplotlib
+seaborn
+tensorflow
