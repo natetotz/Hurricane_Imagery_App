@@ -1,10 +1,6 @@
 # Hurricane_Imagery_App
 
-Contains files and documentation to run an app for predicting windspeeds of tropical cyclones based on their satellite imagery.  The app is powered and hosted by Streamlit at the URL
-
-https://share.streamlit.io/natetotz/hurricane_imagery_app/main
-
-This model performs comparably to existing Dvorak-type techniques while only requiring a single centered infrared image.
+Contains files and documentation to run an app for predicting windspeeds of tropical cyclones based on their satellite imagery.  The app is powered and hosted by Streamlit [here](https://share.streamlit.io/natetotz/hurricane_imagery_app/main).  This model performs comparably to existing Dvorak-type techniques while only requiring a single centered infrared image.
 
 ## The underlying data set and sample images
 
