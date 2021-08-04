@@ -4,7 +4,7 @@ Contains files and documentation to run a Streamlit app for predicting windspeed
 
 ## The underlying data set and sample images
 
-Input images are IRWIN (infrared window) images near 11mcm from the GRIDSAT-B1 satellite.  You can find raw global satellite imagery at
+Input images are IRWIN (infrared window) images near 11µm from the GRIDSAT-B1 satellite.  You can find raw global satellite imagery at
 
 https://www.ncei.noaa.gov/data/geostationary-ir-channel-brightness-temperature-gridsat-b1/access/
 
