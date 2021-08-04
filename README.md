@@ -1,6 +1,8 @@
 # Hurricane_Imagery_App
 
-Contains files and documentation to run a Streamlit app for predicting windspeeds of tropical cyclones based on their satellite imagery.
+Contains files and documentation to run an app for predicting windspeeds of tropical cyclones based on their satellite imagery.  The app is powered and hosted by Streamlit at the URL
+
+https://share.streamlit.io/natetotz/hurricane_imagery_app/main
 
 ## The underlying data set and sample images
 
