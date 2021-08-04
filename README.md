@@ -22,7 +22,15 @@ Raw compressed .tar.gz data for each storm as well as .csv files containing rele
 
 https://www.ncdc.noaa.gov/hursat/doc/HURSAT-Documentation-v6-b1.pdf
 
-Images were sampled from storms in the years (1978 - 2015) and stratified by estimated windspeed intensity in 5 classes : tropical storm, category 1, category 2, category 3, and category 4-5.  Each class contains 1,554 images for a total training size of 6,720 and testing size of 1,050.
+Images were sampled from storms in the years (1978 - 2015) and stratified by estimated windspeed intensity in 5 classes: 
+
++ Tropical Storm
++ Category 1
++ Category 2
++ Category 3
++ Category 4-5
+
+Each class contains 1,554 images for a total training size of 6,720 and testing size of 1,050.
 
 ## Details on the machine learning algorithm
 
