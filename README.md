@@ -18,4 +18,10 @@ Raw compressed .tar.gz data for each storm as well as .csv files containing rele
 
 ## Details on the machine learning algorithm
 
-The model chosen is a CNN using a stochastic gradient descent optimizer.  The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  Note that due to the relative lack of training examples in category 5, the model will tend to underestimate the intensity of very intense storms.  The algorithm also assumes imput images are centered on the circulation of the tropical cyclone.  Therefore storms with ill-defined eyes or unclear circulation patterns will be difficult to properly center and therefore accurately analyze.  This is particularly true of weak storms.
+The model chosen is a CNN using a stochastic gradient descent optimizer.  
+
+The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  For an in-depth analysis of Dvorak techniques and their errors, consult 'An Evaluation of Dvorak Technique–Based Tropical Cyclone Intensity Estimates' by J. Knaff et. al. (2010), available online at
+
+https://journals.ametsoc.org/view/journals/wefo/25/5/2010waf2222375_1.xml
+
+Note that due to the relative lack of training examples in category 5, the model will tend to underestimate the intensity of very intense storms.  The algorithm also assumes imput images are centered on the circulation of the tropical cyclone.  Therefore storms with ill-defined eyes or unclear circulation patterns will be difficult to properly center and therefore accurately analyze.  This is particularly true of weak storms.
