@@ -16,7 +16,7 @@ The ML model that predicts the windspeed uses data on centered images of tropica
 
 https://www.ncei.noaa.gov/data/hurricane-satellite-hursat-b1/archive/v06/
 
-Raw compressed .tar.gz data for each storm as well as .csv files containing relevant features for each image are stored at the AWS S3 bucket 'hurricane-imagery-bucket'.  When unzipped, the data is stoed in netCDF4 format.  Documentation for these files can be found at
+Raw compressed .tar.gz data for each storm as well as .csv files containing relevant features for each image are stored at the AWS S3 bucket 'hurricane-imagery-bucket'.  When unzipped, the data is stored in netCDF4 format.  Documentation for these files can be found at
 
 https://www.ncdc.noaa.gov/hursat/doc/HURSAT-Documentation-v6-b1.pdf
 
