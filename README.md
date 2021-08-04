@@ -26,7 +26,7 @@ Images were sampled from storms in the years (1978 - 2015) and stratified by est
 
 ## Details on the machine learning algorithm
 
-The model chosen is a CNN using a stochastic gradient descent optimizer.  
+The model chosen is a regression CNN using a stochastic gradient descent optimizer.  
 
 The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  For an in-depth analysis of Dvorak techniques and their errors, consult *An Evaluation of Dvorak Technique–Based Tropical Cyclone Intensity Estimates, J. Knaff et. al. (2010)*, available online at
 
