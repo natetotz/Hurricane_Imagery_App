@@ -4,6 +4,8 @@ Contains files and documentation to run an app for predicting windspeeds of trop
 
 https://share.streamlit.io/natetotz/hurricane_imagery_app/main
 
+This model performs comparably to existing Dvorak-type techniques while only requiring a single centered infrared image.
+
 ## The underlying data set and sample images
 
 Input images are IRWIN (infrared window) images near 11µm from the GRIDSAT-B1 satellite.  Raw global satellite imagery is available at
