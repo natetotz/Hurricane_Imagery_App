@@ -1,9 +1,14 @@
 # Hurricane_Imagery_App
+
 Contains files and documentation to run a Streamlit app for predicting windspeeds of tropical cyclones based on their satellite imagery.
+
+## The data sets
 
 Input images are IRWIN (infrared window) images near 11mcm from the GRIDSAT-B1 satellite.  You can find raw global satellite imagery at
 
 https://www.ncei.noaa.gov/data/geostationary-ir-channel-brightness-temperature-gridsat-b1/access/
+
+Some sample images in the correct format for processing are included in the folder sample_images.  These are images of more recent hurricanes (spanning the years 2017 - 2020) derived from the GRIDSAT-B1 data resized and centered by hand.
 
 The ML model that predicts the windspeed uses data on centered images of tropical cyclones from the HURSAT-B1 dataset found here:
 
