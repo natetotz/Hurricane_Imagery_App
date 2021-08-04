@@ -28,4 +28,4 @@ The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the 
 
 https://journals.ametsoc.org/view/journals/wefo/25/5/2010waf2222375_1.xml
 
-Note that due to the relative lack of training examples in category 5, the model will tend to underestimate the intensity of very intense storms.  The algorithm also assumes imput images are centered on the circulation of the tropical cyclone.  Therefore storms with ill-defined eyes or unclear circulation patterns will be difficult to properly center and therefore accurately analyze.  This is particularly true of weak storms.
+Note that due to the relative lack of training examples in category 5, the model will tend to underestimate the intensity of very intense storms.  The algorithm also assumes input images are centered on the circulation of the tropical cyclone.  Therefore storms with ill-defined eyes or unclear circulation patterns will be difficult to properly center and therefore accurately analyze; this is particularly true of weak storms.
