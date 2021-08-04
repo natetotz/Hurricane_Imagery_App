@@ -12,7 +12,7 @@ https://www.ncei.noaa.gov/data/geostationary-ir-channel-brightness-temperature-g
 
 Some sample images in the correct format for processing are included in the folder sample_images.  These are images of more recent hurricanes (spanning the years 2017 - 2020) derived from the GRIDSAT-B1 data resized and centered by hand.
 
-The ML model that predicts the windspeed uses data on centered images of tropical cyclones from the HURSAT-B1 dataset found here:
+The ML model uses data on centered images of tropical cyclones from the HURSAT-B1 dataset found here:
 
 https://www.ncei.noaa.gov/data/hurricane-satellite-hursat-b1/archive/v06/
 
