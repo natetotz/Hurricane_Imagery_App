@@ -20,7 +20,7 @@ Each class contains 1,554 images for a total training size of 6,720 and testing 
 
 ## Details on the machine learning algorithm
 
-The model chosen is a regression CNN using a stochastic gradient descent optimizer.  
+The model chosen is a regression CNN using a stochastic gradient descent optimizer.  Details of the model and its training are in the Hurricane_ML.py script.
 
 The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  For an in-depth analysis of Dvorak techniques and their errors, consult [*An Evaluation of Dvorak Technique–Based Tropical Cyclone Intensity Estimates, J. Knaff et. al. (2010)*](https://journals.ametsoc.org/view/journals/wefo/25/5/2010waf2222375_1.xml).
 
