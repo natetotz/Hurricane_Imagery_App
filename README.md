@@ -28,7 +28,7 @@ Images were sampled from storms in the years (1978 - 2015) and stratified by est
 
 The model chosen is a CNN using a stochastic gradient descent optimizer.  
 
-The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  For an in-depth analysis of Dvorak techniques and their errors, consult 'An Evaluation of Dvorak Technique–Based Tropical Cyclone Intensity Estimates' by J. Knaff et. al. (2010), available online at
+The resulting model has a RMSE of 10 knots, which is comparable to RMSEs of the existing Dvorak technique for estimating windspeeds based on satellite imagery.  For an in-depth analysis of Dvorak techniques and their errors, consult *An Evaluation of Dvorak Technique–Based Tropical Cyclone Intensity Estimates, J. Knaff et. al. (2010)*, available online at
 
 https://journals.ametsoc.org/view/journals/wefo/25/5/2010waf2222375_1.xml
 
