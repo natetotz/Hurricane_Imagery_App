@@ -15,7 +15,7 @@ The ML model that predicts the windspeed uses data on centered images of tropica
 https://www.ncei.noaa.gov/data/hurricane-satellite-hursat-b1/archive/v06/
 
 Raw compressed .tar.gz data for each storm as well as .csv files containing relevsat features for each image are stored at the AWS S3 bucket 'hurricane-imagery-bucket'.  Images were sampled stratified by estimated windspeed intensity in 5 classes : tropical storm, category 1, category 2, category 3, and category 4-5.
-Each class contains approximately 1,500 images for a total training size of 6,720 and testing size of 1,050.
+Each class contains 1,554 images for a total training size of 6,720 and testing size of 1,050.
 
 ## Details on the machine learning algorithm
 
