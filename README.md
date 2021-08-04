@@ -4,9 +4,9 @@ Contains files and documentation to run an app for predicting windspeeds of trop
 
 ## The underlying data set and sample images
 
-Input images are IRWIN (infrared window) images near 11µm from the GRIDSAT-B1 satellite.  Raw global satellite imagery is available [here](https://www.ncei.noaa.gov/data/geostationary-ir-channel-brightness-temperature-gridsat-b1/access/).  Some sample images in the correct format for processing are included in the folder sample_images.  These are images of more recent hurricanes (spanning the years 2017 - 2020) derived from the GRIDSAT-B1 data resized and centered by hand.
+Input images are IRWIN (infrared window) images near 11µm from the GRIDSAT-B1 satellite, in the form of 301 x 301 CSV files.  Raw global satellite imagery is available [here](https://www.ncei.noaa.gov/data/geostationary-ir-channel-brightness-temperature-gridsat-b1/access/).  Some sample images in the correct format for processing are included in the folder sample_images.  These are images of more recent hurricanes (spanning the years 2017 - 2020) derived from the GRIDSAT-B1 data resized and centered by hand.
 
-The ML model uses data on centered images of tropical cyclones from the HURSAT-B1 dataset found [here](https://www.ncei.noaa.gov/data/hurricane-satellite-hursat-b1/archive/v06/).  Raw compressed .tar.gz data for each storm as well as .csv files containing relevant features for each time slice of each storm are stored at the AWS S3 bucket 'hurricane-imagery-bucket'.  When unzipped, the data is stored in netCDF4 format.  Documentation for these files can be found [here](https://www.ncdc.noaa.gov/hursat/doc/HURSAT-Documentation-v6-b1.pdf).
+The ML model uses data on centered images of tropical cyclones from the HURSAT-B1 dataset found [here](https://www.ncei.noaa.gov/data/hurricane-satellite-hursat-b1/archive/v06/).  Raw compressed .tar.gz data for each storm as well as CSV files containing relevant features for each time slice of each storm are stored at the AWS S3 bucket 'hurricane-imagery-bucket'.  When unzipped, the data is stored in netCDF4 format.  Documentation for these files can be found [here](https://www.ncdc.noaa.gov/hursat/doc/HURSAT-Documentation-v6-b1.pdf).
 
 Images were sampled from storms in the years (1978 - 2015) and stratified by estimated windspeed intensity in 5 classes: 
 
