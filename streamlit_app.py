@@ -148,8 +148,8 @@ if datetime and lat and lon:
     norm_image.resize(1, 301, 301, 1)
 
     prediction_physical = predict_windspeed(norm_image)
-    create_user_log(datetime, lat, lon, prediction_physical)
     plot_cyclone(centered_df)
+    create_user_log(datetime, lat, lon, prediction_physical)
 
     display_restart_button()
 
