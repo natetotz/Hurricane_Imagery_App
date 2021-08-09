@@ -70,7 +70,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
-    user_log_path = 'Hurricane_Imagery_App/user_logs/test.csv'
+    user_log_path = '/app/hurricane_imagery_app/user_logs/test.csv'
     # ' + str(request_datetime.date) + '_' + str(request_datetime.time) + '.csv'
     user_log_df.to_csv(user_log_path)
 
