@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import seaborn as sns
 import os
+from github import Github
 
 import tensorflow as tf
 
@@ -70,8 +71,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
-    user_log_path = '/natetotz/hurricane-imagery-bucket/main/user_logs/test.csv'  # + str(request_datetime) + '.csv'
-    user_log_df.to_csv(user_log_path)
+    user_log_csv = user_log_df.to_csv()
 
 
 MAX_PIXEL = 350
