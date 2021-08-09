@@ -73,8 +73,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
     user_log_csv = user_log_df.to_csv()
     
-    github_client = Github(login_or_token = 'nathantotz@gmail.com',
-                           password = 'GnYnY55foz48')
+    github_client = Github('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')
     hurricane_repo = github_client.get_repo('natetotz/Hurricane_Imagery_App')
     hurricane_repo.create_file(str(request_datetime) + ".csv", 'commitmesssge', 'content')
 
