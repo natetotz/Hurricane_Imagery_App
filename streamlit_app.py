@@ -65,12 +65,11 @@ def display_restart_button():
 def create_user_log(datetime, lat, lon, prediction_physical):
 
     request_datetime = dt.now()
-    user_log_data = {'request_datetime' : request_datetime,
-                     'storm_datetime' : datetime,
+    user_log_data = {'storm_datetime' : datetime,
                      'storm_lat' : lat,
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
-    user_log_df = pd.DataFrame(user_log_data)
+    user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
     user_log_df.to_csv('/user_logs/' + str(request_datetime) + '.csv')
 
 
