@@ -76,7 +76,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     github_client = Github(login_or_token = 'nathantotz@gmail.com',
                            password = 'GnYnY55foz48')
     hurricane_repo = github_client.get_repo('natetotz/Hurricane_Imagery_App')
-    hurricane_repo.create_file('/user_logs/' + str(request_datetime), 'commitmesssge', 'content')
+    hurricane_repo.create_file(str(request_datetime) + ".csv", 'commitmesssge', 'content')
 
 
 MAX_PIXEL = 350
