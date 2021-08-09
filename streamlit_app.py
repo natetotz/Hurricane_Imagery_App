@@ -64,6 +64,11 @@ def display_restart_button():
         datetime = False
 
 def create_user_log(datetime, lat, lon, prediction_physical):
+    
+    # TODO:
+    # so the pygithub documentation for update_file is so horrible its unusable.
+    # maybe just do this purely through the command line
+    # you'll need to import your bash_string function.
 
     request_datetime = dt.now()
     user_log_data = {'storm_datetime' : datetime,
