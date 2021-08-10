@@ -88,14 +88,12 @@ def create_user_log(datetime, lat, lon, prediction_physical):
 #     origin = repo.remote('origin')
 #     origin.push()
 
-    try:
-      token = st.text_input("Enter Github token:")
-      if token:
-        bash_string('git add ' + file_name)
-        bash_string('git commit -m')
-        bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'
-    except:
-      st.write("Failed to GIT")
+    token = st.text_input("Enter Github token:")
+    if token:
+      bash_string('git add ' + file_name)
+      bash_string('git commit -m')
+      bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'
+
 
       
 
