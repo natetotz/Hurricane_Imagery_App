@@ -78,7 +78,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     file_name = "UserLog" + str(request_datetime) + ".csv"
     user_log_df.to_csv(file_name)
     try:
-      bash_string('mv ' + file_name + ' /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs/' + file_name)
+      bash_string('cp /app/hurricane_imagery_app/' + file_name + ' /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs/' + file_name)
     except:
       st.write("Failed to generate user log.")
       
