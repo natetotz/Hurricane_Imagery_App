@@ -16,6 +16,8 @@ import os
 from git import Repo
 import subprocess
 
+from git import Repo
+
 import tensorflow as tf
 
 def bash_string(string):
@@ -80,7 +82,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
     try:
-      bash_string('cp /app/hurricane_imagery_app/' + file_name + ' /natetotz/Hurricane_Imagery_App/user_logs/' + file_name)
+      bash_string('mv /app/hurricane_imagery_app/' + file_name + ' /app/hurricane_imagery_app/user_logs/' + file_name)
     except:
       st.write("Failed to generate user log.")
       
