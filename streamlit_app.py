@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import seaborn as sns
 import os
-from github import Github
+from git import Repo
 
 import tensorflow as tf
 
@@ -64,11 +64,6 @@ def display_restart_button():
         datetime = False
 
 def create_user_log(datetime, lat, lon, prediction_physical):
-    
-    # TODO:
-    # so the pygithub documentation for update_file is so horrible its unusable.
-    # maybe just do this purely through the command line
-    # you'll need to import your bash_string function.
 
     request_datetime = dt.now()
     user_log_data = {'storm_datetime' : datetime,
@@ -76,12 +71,16 @@ def create_user_log(datetime, lat, lon, prediction_physical):
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
-    user_log_csv = user_log_df.to_csv()
-    token = st.text_input("Please enter Github token:")
-    github_client = Github(token)
-    hurricane_repo = github_client.get_repo('natetotz/Hurricane_Imagery_App')
-    hurricane_repo.create_file("user_logs/" + str(request_datetime) + ".csv", 'commitmesssge', user_log_csv)
-
+    user_log_df.to_csv("UserLog" + str(request_datetime) + ".csv")
+    repo_dir = 'Hurricane_Imagery_App'
+    repo_client = Repo(repo_dir)
+    files_to_upload = ["UserLog" + str(request_datetime) + ".csv"]
+    commit_message = 'Added user log dated ' + request_datetime
+    repo_client.index.add(files_to_upload)
+    repo_client.index.commit(commit_message)
+    origin = repo.remote('origin')
+    origin.push()
+    
 
 MAX_PIXEL = 350
 MAX_WIND = 180
