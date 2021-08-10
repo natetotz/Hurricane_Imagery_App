@@ -82,9 +82,13 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
     try:
-      bash_string('mv /app/hurricane_imagery_app/' + file_name + ' /app/hurricane_imagery_app/user_logs/' + file_name)
+      repo = Repo('Hurricane_Imagery_App')
+      repo.index.add([file_name])
+      repo.index.commit('Adding User Log at ' + str(request_datetime))
+      origin = repo.remote('origin')
+      origin.push()
     except:
-      st.write("Failed to generate user log.")
+      st.write("Failed to generate user log with GitPython.")
       
 
 MAX_PIXEL = 350
