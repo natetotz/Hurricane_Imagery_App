@@ -81,14 +81,13 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     user_log_df.to_csv(file_name)
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
-    try:
-      repo = Repo('Hurricane_Imagery_App')
-      repo.index.add([file_name])
-      repo.index.commit('Adding User Log at ' + str(request_datetime))
-      origin = repo.remote('origin')
-      origin.push()
-    except:
-      st.write("Failed to generate user log with GitPython.")
+
+    repo = Repo('Hurricane_Imagery_App')
+    repo.index.add([file_name])
+    repo.index.commit('Adding User Log at ' + str(request_datetime))
+    origin = repo.remote('origin')
+    origin.push()
+
       
 
 MAX_PIXEL = 350
