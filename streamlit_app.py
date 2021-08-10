@@ -88,6 +88,8 @@ def create_user_log(datetime, lat, lon, prediction_physical):
 #     origin = repo.remote('origin')
 #     origin.push()
 
+#     the CSV file name has a space in it, which is confusing bash.  replace it with string methods with an underscore or something.
+
     token = st.text_input("Enter Github token:")
     if token:
       st.write(bash_string('git add ' + file_name))
