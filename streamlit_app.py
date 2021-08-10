@@ -82,14 +82,20 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
 
-    repo = Repo('Hurricane_Imagery_App')
-    repo.index.add([file_name])
-    repo.index.commit('Adding User Log at ' + str(request_datetime))
-    origin = repo.remote('origin')
-    origin.push()
+#     repo = Repo('Hurricane_Imagery_App')
+#     repo.index.add([file_name])
+#     repo.index.commit('Adding User Log at ' + str(request_datetime))
+#     origin = repo.remote('origin')
+#     origin.push()
 
-#     try:
-#       bash_string('cp /app/hurricane_imagery_app/' + file_name + ' 
+    try:
+      token sw.text_input("Enter Github token:)
+      if token:
+        bash_string('git add ' + file_name)
+        bash_string('git commit -m')
+        bash_string('git push https://{}@github.com/natetotz/Hurricane_Imagery_App.git'.format(token)
+    except:
+      st.write("Failed to GIT")
 
       
 
