@@ -80,7 +80,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
     try:
-      bash_string('cp /app/hurricane_imagery_app/' + file_name + ' /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs/' + file_name)
+      bash_string('cp /app/hurricane_imagery_app/' + file_name + ' /natetotz/Hurricane_Imagery_App/user_logs/' + file_name)
     except:
       st.write("Failed to generate user log.")
       
