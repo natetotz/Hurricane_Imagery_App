@@ -93,7 +93,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
       if token:
         bash_string('git add ' + file_name)
         bash_string('git commit -m')
-        bash_string('git push https://{}@github.com/natetotz/Hurricane_Imagery_App.git'.format(token)
+        bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'
     except:
       st.write("Failed to GIT")
 
