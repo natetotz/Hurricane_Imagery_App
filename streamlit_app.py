@@ -72,7 +72,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
                      'predicted_windspeed' : prediction_physical}
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
     user_log_df.to_csv("UserLog" + str(request_datetime) + ".csv")
-    repo_dir = 'Hurricane_Imagery_App'
+    repo_dir = 'natetotz/Hurricane_Imagery_App/'
     repo_client = Repo(repo_dir)
     files_to_upload = ["UserLog" + str(request_datetime) + ".csv"]
     commit_message = 'Added user log dated ' + request_datetime
