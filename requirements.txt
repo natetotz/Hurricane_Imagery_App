@@ -6,4 +6,3 @@ seaborn
 tensorflow
 netCDF4
 selenium
-subprocess
