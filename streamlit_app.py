@@ -89,7 +89,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
 #     origin.push()
 
     try:
-      token sw.text_input("Enter Github token:)
+      token = st.text_input("Enter Github token:)
       if token:
         bash_string('git add ' + file_name)
         bash_string('git commit -m')
