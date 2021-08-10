@@ -77,7 +77,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
     file_name = "UserLog" + str(request_datetime) + ".csv"
     user_log_df.to_csv(file_name)
-    bash_string("mv " + file_name + " /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs")
+    bash_string("mv " + file_name + " /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs/" + file_name)
 
 
 MAX_PIXEL = 350
