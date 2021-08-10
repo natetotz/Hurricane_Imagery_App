@@ -138,7 +138,6 @@ if datetime and lat and lon:
     nc_file_name = nc_file_link.text
     dataset = nc.Dataset(nc_file_name)
     dataset.set_auto_mask(False)
-    os.remove("GRIDSAT-B1." + datetime + ".v02r01.nc")
 
     df_irwin = pd.DataFrame(dataset['irwin_2'][0])
     del (dataset)
