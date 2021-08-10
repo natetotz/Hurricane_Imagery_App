@@ -6,4 +6,4 @@ seaborn
 tensorflow
 netCDF4
 selenium
-PyGithub
+GitPython
