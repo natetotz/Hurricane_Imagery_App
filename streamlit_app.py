@@ -90,9 +90,9 @@ def create_user_log(datetime, lat, lon, prediction_physical):
 
     token = st.text_input("Enter Github token:")
     if token:
-      bash_string('git add ' + file_name)
-      bash_string('git commit -m')
-      bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git')
+      st.write(bash_string('git add ' + file_name))
+      st.write(bash_string('git commit -m'))
+      st.write(bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'))
 
 
       
