@@ -6,5 +6,4 @@ seaborn
 tensorflow
 netCDF4
 selenium
-GitPython
 subprocess
