@@ -14,8 +14,12 @@ import matplotlib
 import seaborn as sns
 import os
 from git import Repo
+import subprocess
 
 import tensorflow as tf
+
+def bash_string(string):
+  return subprocess.run(string, shell = True, capture_output = True)
 
 def convert_coordinates(NS_index, EW_index, to_degrees):
     # conversion between true latitude/longitude and the indices here:
@@ -71,16 +75,10 @@ def create_user_log(datetime, lat, lon, prediction_physical):
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
-    user_log_df.to_csv("UserLog" + str(request_datetime) + ".csv")
-    repo_dir = 'natetotz/Hurricane_Imagery_App/'
-    repo_client = Repo(repo_dir)
-    files_to_upload = ["UserLog" + str(request_datetime) + ".csv"]
-    commit_message = 'Added user log dated ' + request_datetime
-    repo_client.index.add(files_to_upload)
-    repo_client.index.commit(commit_message)
-    origin = repo.remote('origin')
-    origin.push()
-    
+    file_name = "UserLog" + str(request_datetime) + ".csv"
+    user_log_df.to_csv(file_name)
+    bash_string("mv " + file_name + " /Users/nathantotz/Desktop/Hurricane_Imagery_Models/User_Logs")
+
 
 MAX_PIXEL = 350
 MAX_WIND = 180
