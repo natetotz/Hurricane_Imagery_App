@@ -85,6 +85,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     user_log_df.to_csv(file_name)
     
     st.write(bash_string('pwd'))
+    st.write(bash_string('cd /app/hurricane_imagery_app/user_logs'))
     st.write(bash_string('ls'))
 
     token = st.text_input("Enter Github token:")
