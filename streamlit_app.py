@@ -72,36 +72,30 @@ def display_restart_button():
 def create_user_log(datetime, lat, lon, prediction_physical):
 
     request_datetime = dt.now()
+    
     user_log_data = {'storm_datetime' : datetime,
                      'storm_lat' : lat,
                      'storm_long' : lon,
                      'predicted_windspeed' : prediction_physical}
+    
     user_log_df = pd.DataFrame(user_log_data, index = [request_datetime])
     file_name = "UserLog" + str(request_datetime) + ".csv"
     file_name_parts = file_name.split()
     file_name = file_name_parts[0] + file_name_parts[1]
     user_log_df.to_csv(file_name)
+    
     st.write(bash_string('pwd'))
     st.write(bash_string('ls'))
 
-#     repo = Repo('Hurricane_Imagery_App')
-#     repo.index.add([file_name])
-#     repo.index.commit('Adding User Log at ' + str(request_datetime))
-#     origin = repo.remote('origin')
-#     origin.push()
-
-#     the CSV file name has a space in it, which is confusing bash.  replace it with string methods with an underscore or something.
-
     token = st.text_input("Enter Github token:")
+    
     if token:
       st.write(bash_string('git config --global user.name "natetotz"'))
       st.write(bash_string('git config --global user.email nathantotz@gmail.com'))
-      st.write(bash_string('git add ' + file_name))
+      st.write(bash_string('git add user_logs/' + file_name))
       st.write(bash_string('git commit -m Adds_' + file_name))
       st.write(bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'))
 
-
-      
 
 MAX_PIXEL = 350
 MAX_WIND = 180
