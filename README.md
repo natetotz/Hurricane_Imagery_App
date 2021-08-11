@@ -16,7 +16,7 @@ Images were sampled from storms in the years (1978 - 2015) and stratified by est
 + Category 3
 + Category 4-5
 
-Each class contains 1,554 images for a total training size of 6,720 and testing size of 1,050.  The full data set is stored [on Google Drive here](https://drive.google.com/drive/folders/1sw9jvZgN-knslx3rACmnA6oQELqjHvCB?usp=sharing).  Each file is a 301 x 302 CSV file.  The last column of each file is filled with the actual windspeed of the storm in knots.  The remaining block of the array is the 301 x 301 greyscale image of the storm.  Each file name conatins metadata for the storm following the same convention as the above netCDF4 file names.
+Each class contains 1,554 images for a total training size of 6,720 and testing size of 1,050.  The full stratified data set used for training and validating the model is stored [on Google Drive here](https://drive.google.com/drive/folders/1sw9jvZgN-knslx3rACmnA6oQELqjHvCB?usp=sharing).  Each file is a 301 x 302 CSV file.  The last column of each file is filled with the actual windspeed of the storm in knots.  The remaining block of the array is the 301 x 301 greyscale image of the storm.  Each file name conatins metadata for the storm following the same convention as the above netCDF4 file names.
 
 ## Details on the machine learning algorithm
 
