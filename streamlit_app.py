@@ -99,8 +99,7 @@ MAX_WIND = 180
 
 st.image('hurricane_space_pic.png')
 st.title('🌀 Tropical Cyclone Image Predictor 🌀')
-
-st.write("Enter the Spacetime Coordinates of a Tropical Cyclone to Estimate its Windspeed")
+st.header("Enter the Spacetime Coordinates of a Tropical Cyclone to Estimate its Windspeed")
 st.write(
     "See [here](https://www.ssd.noaa.gov/PS/TROP/tdpositions.html) for a list of historical locations of tropical cyclones.",
     unsafe_allow_html=True)
