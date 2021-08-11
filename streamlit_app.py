@@ -99,18 +99,15 @@ MAX_WIND = 180
 
 st.image('hurricane_space_pic.png')
 st.title('🌀 Tropical Cyclone Image Predictor 🌀')
-st.header('Input an Infrared Satellite Image of a Tropical Cyclone to Estimate its Windspeed')
 
-st.write(' ')
+st.write("Enter the Spacetime Coordinates of a Tropical Cyclone to Estimate its Windspeed")
+st.write(
+    "See [here](https://www.ssd.noaa.gov/PS/TROP/tdpositions.html) for a list of historical locations of tropical cyclones.",
+    unsafe_allow_html=True)
 
 lat = False
 lon = False
 datetime = False
-
-st.write("Enter the spacetime coordinates of a tropical cyclone you would like to analyze.")
-st.write(
-    "See [here](https://www.ssd.noaa.gov/PS/TROP/tdpositions.html) for a list of historical locations of tropical cyclones.",
-    unsafe_allow_html=True)
 
 datetime = st.text_input("Enter Datetime (Format YYYY.MM.DD.HH, (YYYY 1980-2021) (HH 24HR Multiple of 3) :",
                          key='datetime_field',
