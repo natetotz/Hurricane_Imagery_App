@@ -97,6 +97,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
 MAX_PIXEL = 350
 MAX_WIND = 180
 
+st.image('hurricane_space_pic.png')
 st.title('🌀 Tropical Cyclone Image Predictor 🌀')
 st.header('Input an Infrared Satellite Image of a Tropical Cyclone to Estimate its Windspeed')
 
