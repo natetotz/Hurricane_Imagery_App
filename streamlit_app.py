@@ -92,8 +92,9 @@ def create_user_log(datetime, lat, lon, prediction_physical):
     if token:
       st.write(bash_string('git config --global user.name "natetotz"'))
       st.write(bash_string('git config --global user.email nathantotz@gmail.com'))
-      st.write(bash_string('git add user_logs/' + file_name))
-      st.write(bash_string('git commit -m Adds_' + file_name))
+      st.write(bash_string('git status'))
+      st.write(bash_string('git add ' + file_name))
+      st.write(bash_string('git commit -m "Adds ' + file_name + '"'))
       st.write(bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git'))
 
 
