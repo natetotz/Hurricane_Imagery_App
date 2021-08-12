@@ -91,7 +91,7 @@ def create_user_log(datetime, lat, lon, prediction_physical):
       bash_string('git config --global user.email nathantotz@gmail.com')
       bash_string('git add ' + file_name)
       bash_string('git commit -m "Adds ' + file_name + '"')
-      st.write(bash_string('git status'))
+      st.write(bash_string('ls'))
       st.write(bash_string('git mv UserLog*.csv /user_logs'))
       bash_string(f'git push https://{token}@github.com/natetotz/Hurricane_Imagery_App.git')
 
